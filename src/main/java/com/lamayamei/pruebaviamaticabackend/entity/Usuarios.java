@@ -17,8 +17,10 @@ public class Usuarios {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idUsuario;
+    @Column(unique = true)
     private String username;
     private String password;
+    @Column(unique = true)
     private String mail;
     private boolean sessionActive;
     private char status;

@@ -1,25 +1,19 @@
-package com.lamayamei.pruebaviamaticabackend.entity;
+package com.lamayamei.pruebaviamaticabackend.DTO;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
-
-@Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Persona {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idPersona;
+public class RegistroDTO {
     private String nombres;
     private String apellidos;
-    @Column(unique = true)
     private String identificacion;
-
+    private String usuario;
+    private String contrasena;
+    private String email;
 }
