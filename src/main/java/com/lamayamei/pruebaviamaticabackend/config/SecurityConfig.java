@@ -27,8 +27,8 @@ public class SecurityConfig {
                 .cors(cors -> cors.disable()).csrf(csrf -> csrf.disable())
                 .authorizeRequests(authorizeRequests ->
                         authorizeRequests
-                                .requestMatchers("/api/login").permitAll()
-                                .requestMatchers(HttpMethod.GET,"/api/userdata/lastsession/{username}").permitAll()
+                                .requestMatchers("/api/login","/api/registro","/api/users/edit/{username}").permitAll()
+                                .requestMatchers(HttpMethod.GET,"/api/userdata/lastsession/{username}", "/api/users", "/api/users/{username}").permitAll()
                                 .anyRequest().authenticated()
                 )
         ;

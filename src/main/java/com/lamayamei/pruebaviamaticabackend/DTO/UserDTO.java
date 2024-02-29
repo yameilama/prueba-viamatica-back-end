@@ -9,11 +9,12 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegistroDTO {
+public class UserDTO {
     private String nombres;
     private String apellidos;
+    private boolean sessionActive;
     private String identificacion;
-    private String username;
-    private String contrasena;
+    private char status;
     private String mail;
+    private String username;
 }
